@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+*.egg
+
+# Configuration (keep example, ignore actual config)
+config.py
+!config.example.py
+
+# Telegram session files (contain auth tokens)
+*.session
+*.session-journal
+scraper_session*
+
+# Output files
+scraped_files.csv
+scraped_files.json
+*.csv
+*.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local

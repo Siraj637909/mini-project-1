@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Group File Scraper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">📥</span>
+                <span class="logo-text">TG File Scraper</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a href="https://github.com/Siraj637909/telegram-group-file-scraper" class="btn btn-primary" target="_blank">
+                <span class="github-icon">⭐</span> Star on GitHub
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Scrape Files from
+                    <span class="highlight">Telegram Groups</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A powerful Python tool to extract, filter, and export files from any Telegram group. 
+                    Fast, secure, and easy to use.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#installation" class="btn btn-primary btn-lg">
+                        Get Started 🚀
+                    </a>
+                    <a href="https://github.com/Siraj637909/telegram-group-file-scraper" class="btn btn-secondary btn-lg" target="_blank">
+                        View on GitHub
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">453+</span>
+                        <span class="stat-label">Files Scraped</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free & Open Source</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Python</span>
+                        <span class="stat-label">3.8+</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">terminal</span>
+                    </div>
+                    <div class="window-body">
+                        <pre><code><span class="command">pip install -r requirements.txt</span>
+<span class="command">python telegram_scraper.py --group mygroup</span>
+
+<span class="output">📂 Scraping group: mygroup</span>
+<span class="output">📊 Scanning last 10000 messages...</span>
+<span class="output">📄 [1] file1.ex4 (0.14 MB)</span>
+<span class="output">📄 [2] file2.ex5 (0.23 MB)</span>
+<span class="output">✅ Found 453 files</span>
+<span class="output">📊 Exported to: scraped_files.csv</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Use This Tool?</h2>
+            <p class="section-subtitle">Everything you need to scrape Telegram groups efficiently</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Smart Scraping</h3>
+                    <p>Extract files from any public or private Telegram group with full metadata</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>CSV/JSON Export</h3>
+                    <p>Export results in multiple formats with filename, size, sender, and message links</p>
+                </div>
+                <div class="feature-icon">🎯</div>
+                    <h3>File Type Filter</h3>
+                    <p>Filter by extension (.ex4, .ex5, .zip, .pdf, etc.) to get exactly what you need</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Built with async Telethon library for high-performance scraping</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Secure Auth</h3>
+                    <p>Official Telegram API with secure session management</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Detailed Stats</h3>
+                    <p>Get summaries, file counts, sizes, and top files automatically</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three simple steps to start scraping</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Get API Credentials</h3>
+                        <p>Visit <a href="https://my.telegram.org/apps" target="_blank">my.telegram.org</a>, create an app, and get your API ID and Hash</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Configure & Install</h3>
+                        <p>Copy config.example.py to config.py, add your credentials, and install dependencies with pip</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Run & Export</h3>
+                        <p>Run the scraper with your target group, and get a CSV/JSON file with all scraped files</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="installation">
+        <div class="container">
+            <h2 class="section-title">Installation</h2>
+            <p class="section-subtitle">Get up and running in 5 minutes</p>
+            
+            <div class="install-steps">
+                <div class="install-step">
+                    <h3>1. Clone the Repository</h3>
+                    <div class="code-block">
+                        <code>git clone https://github.com/Siraj637909/telegram-group-file-scraper.git</code>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                </div>
+                <div class="install-step">
+                    <h3>2. Install Dependencies</h3>
+                    <div class="code-block">
+                        <code>cd telegram-group-file-scraper<br>pip install -r requirements.txt</code>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                </div>
+                <div class="install-step">
+                    <h3>3. Configure API Credentials</h3>
+                    <div class="code-block">
+                        <code>cp config.example.py config.py<br># Edit config.py with your API ID, Hash, and Phone</code>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="alert">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-content">
+                    <strong>Important:</strong> Never share your config.py file or session files. They contain authentication tokens.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section id="usage" class="usage">
+        <div class="container">
+            <h2 class="section-title">Usage Examples</h2>
+            <p class="section-subtitle">Powerful command-line interface</p>
+            
+            <div class="usage-examples">
+                <div class="example-card">
+                    <h3>Basic Usage</h3>
+                    <div class="code-block">
+                        <code>python telegram_scraper.py --group mtforexeafree --limit 10000</code>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <h3>Filter File Types</h3>
+                    <div class="code-block">
+                        <code>python telegram_scraper.py -g mygroup -t .ex4 .ex5 .zip</code>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <h3>Custom Output</h3>
+                    <div class="code-block">
+                        <code>python telegram_scraper.py -g mygroup -o my_files.csv --json</code>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="command-table-wrapper">
+                <table class="command-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Short</th>
+                            <th>Description</th>
+                            <th>Default</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>--group</code></td>
+                            <td><code>-g</code></td>
+                            <td>Group username or URL</td>
+                            <td><strong>Required</strong></td>
+                        </tr>
+                        <tr>
+                            <td><code>--limit</code></td>
+                            <td><code>-l</code></td>
+                            <td>Max messages to scan</td>
+                            <td>10000</td>
+                        </tr>
+                        <tr>
+                            <td><code>--output</code></td>
+                            <td><code>-o</code></td>
+                            <td>Output CSV file</td>
+                            <td>scraped_files.csv</td>
+                        </tr>
+                        <tr>
+                            <td><code>--types</code></td>
+                            <td><code>-t</code></td>
+                            <td>File types to filter</td>
+                            <td>All files</td>
+                        </tr>
+                        <tr>
+                            <td><code>--json</code></td>
+                            <td></td>
+                            <td>Also export to JSON</td>
+                            <td>False</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Common questions and answers</p>
+            
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>Is this legal?</h3>
+                    <p>Yes, this uses the official Telegram API. However, always respect group rules and privacy. Don't scrape private data without permission.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>Do I need to be a group member?</h3>
+                    <p>For public groups, no. For private groups, you need to be a member and have the group invite link.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>Will I get banned?</h3>
+                    <p>Unlikely if you use reasonable limits. Telegram has rate limits which the scraper respects. Don't scrape thousands of groups rapidly.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>What file types can I scrape?</h3>
+                    <p>Any file type! Common ones: .ex4, .ex5 (MT4/MT5 EAs), .zip, .rar, .pdf, .doc, images, videos, and more.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>Can I download the actual files?</h3>
+                    <p>This tool exports metadata (filename, size, message link). To download files, use the message links in Telegram.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>How do I get API credentials?</h3>
+                    <p>Go to <a href="https://my.telegram.org/apps" target="_blank">my.telegram.org/apps</a>, log in, and create a new application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Scraping?</h2>
+            <p>Join hundreds of users extracting files from Telegram groups</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/Siraj637909/telegram-group-file-scraper" class="btn btn-primary btn-lg" target="_blank">
+                    Get Started on GitHub
+                </a>
+                <a href="#installation" class="btn btn-secondary btn-lg">
+                    View Installation Guide
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-icon">📥</span>
+                        <span class="logo-text">TG File Scraper</span>
+                    </div>
+                    <p>Built with ❤️ by <a href="https://github.com/Siraj637909" target="_blank">Shaokh Shaikh</a></p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="https://github.com/Siraj637909/telegram-group-file-scraper" target="_blank">GitHub</a>
+                        <a href="https://github.com/Siraj637909/telegram-group-file-scraper/issues" target="_blank">Issues</a>
+                        <a href="https://github.com/Siraj637909/telegram-group-file-scraper/discussions" target="_blank">Discussions</a>
+                    </div>
+                    <p class="copyright">© 2026 MIT License</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
